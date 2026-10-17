@@ -121,7 +121,7 @@ const SEED: Array<Pick<ContentItem, 'id' | 'platform' | 'type' | 'content'>> = [
     platform: 'Instagram',
     type: 'Carrusel',
     content:
-      '¡Deja de perder dinero con automatizaciones mal hechas! Con LeanSync duplicas tus ventas en 30 días o te devolvemos el dinero 🚀 Escríbenos YA.',
+      '¡Deja de perder dinero con automatizaciones mal hechas! Con nuestro servicio duplicas tus ventas en 30 días o te devolvemos el dinero 🚀 Escríbenos YA.',
   },
   {
     id: 2,
