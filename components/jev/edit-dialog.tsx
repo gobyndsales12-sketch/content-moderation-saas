@@ -69,7 +69,7 @@ export function EditDialog({ item, onClose, onSave }: EditDialogProps) {
             type="button"
             disabled={!content.trim()}
             onClick={() => onSave(item.id, content.trim())}
-            className="flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-500 disabled:opacity-50"
+            className="flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-semibold text-black hover:bg-emerald-400 disabled:opacity-50"
           >
             <Check className="h-4 w-4" aria-hidden="true" /> Guardar y Aprobar
           </button>

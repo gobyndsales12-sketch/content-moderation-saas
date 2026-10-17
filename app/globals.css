@@ -43,6 +43,17 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* 30x brand lime (#e8ffb7) mapped onto the green/emerald scales used across the UI */
+  --color-brand: #e8ffb7;
+  --color-green-300: #f4ffe0;
+  --color-green-400: #f1ffd4;
+  --color-green-500: #e8ffb7;
+  --color-green-600: #e8ffb7;
+  --color-emerald-300: #f4ffe0;
+  --color-emerald-400: #f1ffd4;
+  --color-emerald-500: #e8ffb7;
+  --color-emerald-600: #e8ffb7;
 }
 
 :root {

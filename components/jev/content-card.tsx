@@ -78,7 +78,7 @@ export function ContentCard({ item, onAction, onEdit }: ContentCardProps) {
             <button
               type="button"
               onClick={() => onAction(item.id, 'approved')}
-              className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-emerald-500"
+              className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-xs font-semibold text-black transition-colors hover:bg-emerald-400"
             >
               <CheckCircle2 className="h-4 w-4" aria-hidden="true" /> Aprobar
             </button>
