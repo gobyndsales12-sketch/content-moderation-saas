@@ -49,7 +49,7 @@ export function RulesView({ settings, onSave }: RulesViewProps) {
   return (
     <div className="flex-1 overflow-y-auto p-4 md:p-8">
       <div className="max-w-2xl space-y-6 rounded-xl border border-neutral-800 bg-neutral-900/60 p-6">
-        <h3 className="text-base font-semibold text-white">Parámetros de Calificación de JEV</h3>
+        <h3 className="text-base font-semibold text-white">Parámetros de Calificación de PubliX</h3>
 
         <div className="space-y-4">
           <div className="space-y-3 rounded-lg border border-neutral-800/60 bg-neutral-950/40 p-4">
@@ -59,7 +59,7 @@ export function RulesView({ settings, onSave }: RulesViewProps) {
                   Umbral de Confianza Humana
                 </label>
                 <p className="text-xs text-neutral-400">
-                  Si JEV tiene una certeza menor al porcentaje, se envía a revisión manual.
+                  Si PubliX tiene una certeza menor al porcentaje, se envía a revisión manual.
                 </p>
               </div>
               <span className="rounded border border-green-500/20 bg-green-500/10 px-3 py-1 text-sm font-bold text-green-400">

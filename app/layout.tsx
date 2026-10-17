@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'JEV AI · Content Governance',
-  description: 'Moderación inteligente de contenido: JEV evalúa cada pieza contra tus reglas de marca y sólo te envía los casos dudosos.',
+  title: 'PubliX · Content Governance',
+  description: 'Moderación inteligente de contenido: PubliX evalúa cada pieza contra tus reglas de marca y sólo te envía los casos dudosos.',
   generator: 'v0.app',
   icons: {
     icon: [

@@ -54,7 +54,7 @@ export function EditDialog({ item, onClose, onSave }: EditDialogProps) {
         />
 
         <p className="text-xs text-neutral-400">
-          Corrige el texto para cumplir con las políticas y aprueba directamente. JEV re-evaluará las reglas.
+          Corrige el texto para cumplir con las políticas y aprueba directamente. PubliX re-evaluará las reglas.
         </p>
 
         <div className="flex justify-end gap-3 pt-2">

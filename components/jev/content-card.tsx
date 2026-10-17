@@ -30,7 +30,7 @@ export function ContentCard({ item, onAction, onEdit }: ContentCardProps) {
         <div className="flex flex-wrap items-center gap-2">
           <PlatformBadge platform={item.platform} type={item.type} />
           <span className={cn('rounded-md px-2.5 py-1 text-xs font-semibold', confidenceTone(item.confidence))}>
-            Confianza JEV: {item.confidence}%
+            Confianza PubliX: {item.confidence}%
           </span>
           {item.edited && (
             <span className="rounded-md bg-green-500/10 px-2.5 py-1 text-xs font-medium text-green-300">
@@ -48,7 +48,7 @@ export function ContentCard({ item, onAction, onEdit }: ContentCardProps) {
         </blockquote>
 
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400">Evaluación de Reglas JEV</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400">Evaluación de Reglas PubliX</p>
           <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">
             {item.rules.map((rule) => (
               <li

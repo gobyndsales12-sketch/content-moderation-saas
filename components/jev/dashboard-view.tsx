@@ -13,7 +13,7 @@ export function DashboardView({ items }: { items: ContentItem[] }) {
 
   const stats = [
     { label: 'Piezas Procesadas Hoy', value: processed, hint: '+18% vs ayer', valueClass: 'text-white', hintClass: 'text-emerald-400' },
-    { label: 'Aprobación Autónoma JEV', value: `${autonomyRate}%`, hint: `${autoApproved} piezas sin intervención`, valueClass: 'text-emerald-400' },
+    { label: 'Aprobación Autónoma PubliX', value: `${autonomyRate}%`, hint: `${autoApproved} piezas sin intervención`, valueClass: 'text-emerald-400' },
     { label: 'Casos en Revisión', value: pending, hint: 'Pendientes / Dudosos', valueClass: 'text-amber-400' },
     { label: 'Tiempo Ahorrado Estimado', value: `${hoursSaved} hrs`, hint: 'Equivalente a ~0.5 FTE', valueClass: 'text-green-400' },
   ]

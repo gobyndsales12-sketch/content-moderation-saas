@@ -35,7 +35,7 @@ export function AnalyzeForm({ onSubmit }: AnalyzeFormProps) {
       <div className="flex items-center gap-2">
         <Sparkles className="h-4 w-4 text-green-400" aria-hidden="true" />
         <h3 id="analyze-title" className="text-sm font-semibold text-white">
-          Analizar nueva pieza con JEV
+          Analizar nueva pieza con PubliX
         </h3>
       </div>
 

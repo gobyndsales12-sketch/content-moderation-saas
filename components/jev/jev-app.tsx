@@ -19,7 +19,7 @@ import { Sidebar, type Tab } from './sidebar'
 const TITLES: Record<Tab, string> = {
   queue: 'Cola de Aprobación Inteligente',
   dashboard: 'Panel de Control y Ahorro',
-  rules: 'Configuración de Reglas JEV',
+  rules: 'Configuración de Reglas PubliX',
 }
 
 export function JevApp() {
@@ -72,7 +72,7 @@ export function JevApp() {
           <h1 className="text-lg font-semibold text-white">{TITLES[activeTab]}</h1>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
-            JEV Active Engine · Umbral {settings.threshold}%
+            PubliX Active Engine · Umbral {settings.threshold}%
           </span>
         </header>
 

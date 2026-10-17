@@ -21,10 +21,10 @@ export function Sidebar({ activeTab, onTabChange, pendingCount }: SidebarProps) 
       <div>
         <div className="mb-4 flex items-center gap-3 md:mb-8">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-green-500 text-lg font-bold text-black">
-            J
+            P
           </div>
           <div>
-            <p className="font-bold tracking-tight text-white">JEV AI</p>
+            <p className="font-bold tracking-tight text-white">PubliX</p>
             <p className="text-xs text-neutral-400">Content Governance</p>
           </div>
         </div>
