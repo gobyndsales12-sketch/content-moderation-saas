@@ -17,15 +17,15 @@ type SidebarProps = {
 
 export function Sidebar({ activeTab, onTabChange, pendingCount }: SidebarProps) {
   return (
-    <aside className="flex shrink-0 flex-col justify-between border-b border-slate-800 bg-slate-900/50 p-4 md:h-screen md:w-64 md:border-r md:border-b-0 md:p-6">
+    <aside className="flex shrink-0 flex-col justify-between border-b border-neutral-800 bg-neutral-900/50 p-4 md:h-screen md:w-64 md:border-r md:border-b-0 md:p-6">
       <div>
         <div className="mb-4 flex items-center gap-3 md:mb-8">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-lg font-bold text-white">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-green-500 text-lg font-bold text-black">
             J
           </div>
           <div>
             <p className="font-bold tracking-tight text-white">JEV AI</p>
-            <p className="text-xs text-slate-400">Content Governance</p>
+            <p className="text-xs text-neutral-400">Content Governance</p>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ export function Sidebar({ activeTab, onTabChange, pendingCount }: SidebarProps) 
                 aria-current={active ? 'page' : undefined}
                 className={cn(
                   'flex shrink-0 items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors md:w-full',
-                  active ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:bg-slate-800 hover:text-white',
+                  active ? 'bg-green-500 text-black' : 'text-neutral-400 hover:bg-neutral-900 hover:text-green-400',
                 )}
               >
                 <Icon className="h-4 w-4" aria-hidden="true" />
@@ -49,7 +49,7 @@ export function Sidebar({ activeTab, onTabChange, pendingCount }: SidebarProps) 
                   <span
                     className={cn(
                       'ml-auto rounded-full px-2 py-0.5 text-xs',
-                      active ? 'bg-indigo-500 text-white' : 'bg-slate-800 text-slate-300',
+                      active ? 'bg-green-400 text-black' : 'bg-neutral-800 text-neutral-300',
                     )}
                   >
                     {pendingCount}
@@ -62,7 +62,7 @@ export function Sidebar({ activeTab, onTabChange, pendingCount }: SidebarProps) 
         </nav>
       </div>
 
-      <p className="hidden border-t border-slate-800/80 pt-4 text-xs text-slate-500 md:block">
+      <p className="hidden border-t border-neutral-800/80 pt-4 text-xs text-neutral-500 md:block">
         Hackathon 30X Prototype v1.0
       </p>
     </aside>

@@ -48,21 +48,21 @@ export function RulesView({ settings, onSave }: RulesViewProps) {
 
   return (
     <div className="flex-1 overflow-y-auto p-4 md:p-8">
-      <div className="max-w-2xl space-y-6 rounded-xl border border-slate-800 bg-slate-900/60 p-6">
+      <div className="max-w-2xl space-y-6 rounded-xl border border-neutral-800 bg-neutral-900/60 p-6">
         <h3 className="text-base font-semibold text-white">Parámetros de Calificación de JEV</h3>
 
         <div className="space-y-4">
-          <div className="space-y-3 rounded-lg border border-slate-800/60 bg-slate-950/40 p-4">
+          <div className="space-y-3 rounded-lg border border-neutral-800/60 bg-neutral-950/40 p-4">
             <div className="flex items-center justify-between gap-4">
               <div>
                 <label htmlFor="threshold" className="text-sm font-medium text-white">
                   Umbral de Confianza Humana
                 </label>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-neutral-400">
                   Si JEV tiene una certeza menor al porcentaje, se envía a revisión manual.
                 </p>
               </div>
-              <span className="rounded border border-indigo-500/20 bg-indigo-500/10 px-3 py-1 text-sm font-bold text-indigo-400">
+              <span className="rounded border border-green-500/20 bg-green-500/10 px-3 py-1 text-sm font-bold text-green-400">
                 {draft.threshold}%
               </span>
             </div>
@@ -74,20 +74,20 @@ export function RulesView({ settings, onSave }: RulesViewProps) {
               step={5}
               value={draft.threshold}
               onChange={(e) => update({ threshold: Number(e.target.value) })}
-              className="w-full accent-indigo-600"
+              className="w-full accent-green-500"
             />
           </div>
 
           {TOGGLES.map((t) => (
             <div
               key={t.key}
-              className="flex items-center justify-between gap-4 rounded-lg border border-slate-800/60 bg-slate-950/40 p-4"
+              className="flex items-center justify-between gap-4 rounded-lg border border-neutral-800/60 bg-neutral-950/40 p-4"
             >
               <div>
                 <p id={`${t.key}-label`} className="text-sm font-medium text-white">
                   {t.title}
                 </p>
-                <p className="text-xs text-slate-400">{t.description}</p>
+                <p className="text-xs text-neutral-400">{t.description}</p>
               </div>
               <button
                 type="button"
@@ -95,19 +95,19 @@ export function RulesView({ settings, onSave }: RulesViewProps) {
                 aria-checked={draft[t.key]}
                 aria-labelledby={`${t.key}-label`}
                 onClick={() => update({ [t.key]: !draft[t.key] })}
-                className={`relative h-6 w-11 shrink-0 rounded-full transition-colors ${draft[t.key] ? 'bg-indigo-600' : 'bg-slate-700'}`}
+                className={`relative h-6 w-11 shrink-0 rounded-full transition-colors ${draft[t.key] ? 'bg-green-500' : 'bg-neutral-700'}`}
               >
                 <span
-                  className={`absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white transition-transform ${draft[t.key] ? 'translate-x-5' : ''}`}
+                  className={`absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white transition-transform ${draft[t.key] ? 'tranneutral-x-5' : ''}`}
                 />
               </button>
             </div>
           ))}
 
-          <div className="space-y-3 rounded-lg border border-slate-800/60 bg-slate-950/40 p-4">
+          <div className="space-y-3 rounded-lg border border-neutral-800/60 bg-neutral-950/40 p-4">
             <div>
               <p className="text-sm font-medium text-white">Lista de palabras prohibidas</p>
-              <p className="text-xs text-slate-400">Términos que activan el filtro de promesas absolutas.</p>
+              <p className="text-xs text-neutral-400">Términos que activan el filtro de promesas absolutas.</p>
             </div>
             <ul className="flex flex-wrap gap-2">
               {draft.bannedWords.map((word) => (
@@ -142,12 +142,12 @@ export function RulesView({ settings, onSave }: RulesViewProps) {
                   }
                 }}
                 placeholder="Añadir palabra o frase..."
-                className="flex-1 rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-xs text-slate-200 placeholder:text-slate-600 focus:border-indigo-500 focus:outline-none"
+                className="flex-1 rounded-lg border border-neutral-800 bg-neutral-950 px-3 py-2 text-xs text-neutral-200 placeholder:text-neutral-600 focus:border-green-500 focus:outline-none"
               />
               <button
                 type="button"
                 onClick={addWord}
-                className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-700"
+                className="rounded-lg border border-neutral-700 bg-neutral-800 px-3 py-2 text-xs font-semibold text-neutral-200 hover:bg-neutral-700"
               >
                 Añadir
               </button>
@@ -162,7 +162,7 @@ export function RulesView({ settings, onSave }: RulesViewProps) {
               onSave(draft)
               setSaved(true)
             }}
-            className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-500"
+            className="rounded-lg bg-green-500 px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-green-400"
           >
             Guardar Cambios de Reglas
           </button>

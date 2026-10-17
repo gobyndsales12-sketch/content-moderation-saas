@@ -64,11 +64,11 @@ export function JevApp() {
   const pendingCount = items.filter((i) => i.status === 'doubt').length
 
   return (
-    <div className="flex min-h-screen flex-col bg-slate-950 font-sans text-slate-100 md:h-screen md:flex-row">
+    <div className="flex min-h-screen flex-col bg-black font-sans text-neutral-100 md:h-screen md:flex-row">
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} pendingCount={pendingCount} />
 
       <main className="flex flex-1 flex-col overflow-hidden">
-        <header className="flex min-h-16 flex-wrap items-center justify-between gap-3 border-b border-slate-800 bg-slate-900/30 px-4 py-3 md:px-8">
+        <header className="flex min-h-16 flex-wrap items-center justify-between gap-3 border-b border-neutral-800 bg-neutral-900/30 px-4 py-3 md:px-8">
           <h1 className="text-lg font-semibold text-white">{TITLES[activeTab]}</h1>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />

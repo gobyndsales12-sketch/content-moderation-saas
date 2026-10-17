@@ -29,11 +29,11 @@ export function AnalyzeForm({ onSubmit }: AnalyzeFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mb-6 space-y-3 rounded-xl border border-indigo-500/20 bg-indigo-500/5 p-5"
+      className="mb-6 space-y-3 rounded-xl border border-green-500/20 bg-green-500/5 p-5"
       aria-labelledby="analyze-title"
     >
       <div className="flex items-center gap-2">
-        <Sparkles className="h-4 w-4 text-indigo-400" aria-hidden="true" />
+        <Sparkles className="h-4 w-4 text-green-400" aria-hidden="true" />
         <h3 id="analyze-title" className="text-sm font-semibold text-white">
           Analizar nueva pieza con JEV
         </h3>
@@ -47,7 +47,7 @@ export function AnalyzeForm({ onSubmit }: AnalyzeFormProps) {
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder="Pega aquí el copy de tu publicación..."
-        className="h-24 w-full resize-none rounded-lg border border-slate-800 bg-slate-950 p-3 font-mono text-sm text-slate-200 placeholder:text-slate-600 focus:border-indigo-500 focus:outline-none"
+        className="h-24 w-full resize-none rounded-lg border border-neutral-800 bg-neutral-950 p-3 font-mono text-sm text-neutral-200 placeholder:text-neutral-600 focus:border-green-500 focus:outline-none"
       />
 
       <div className="flex flex-wrap items-center gap-2">
@@ -62,7 +62,7 @@ export function AnalyzeForm({ onSubmit }: AnalyzeFormProps) {
             setPlatform(next)
             setType(TYPES[next][0])
           }}
-          className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-xs text-slate-200 focus:border-indigo-500 focus:outline-none"
+          className="rounded-lg border border-neutral-800 bg-neutral-900 px-3 py-2 text-xs text-neutral-200 focus:border-green-500 focus:outline-none"
         >
           {Object.keys(TYPES).map((p) => (
             <option key={p}>{p}</option>
@@ -76,7 +76,7 @@ export function AnalyzeForm({ onSubmit }: AnalyzeFormProps) {
           id="type"
           value={type}
           onChange={(e) => setType(e.target.value)}
-          className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-xs text-slate-200 focus:border-indigo-500 focus:outline-none"
+          className="rounded-lg border border-neutral-800 bg-neutral-900 px-3 py-2 text-xs text-neutral-200 focus:border-green-500 focus:outline-none"
         >
           {TYPES[platform].map((t) => (
             <option key={t}>{t}</option>
@@ -86,7 +86,7 @@ export function AnalyzeForm({ onSubmit }: AnalyzeFormProps) {
         <button
           type="submit"
           disabled={!content.trim()}
-          className="ml-auto rounded-lg bg-indigo-600 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-indigo-500 disabled:cursor-not-allowed disabled:opacity-50"
+          className="ml-auto rounded-lg bg-green-500 px-4 py-2 text-xs font-semibold text-black transition-colors hover:bg-green-400 disabled:cursor-not-allowed disabled:opacity-50"
         >
           Evaluar contenido
         </button>

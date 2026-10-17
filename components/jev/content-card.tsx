@@ -25,7 +25,7 @@ export function ContentCard({ item, onAction, onEdit }: ContentCardProps) {
   const status = STATUS_LABEL[item.status]
 
   return (
-    <article className="flex flex-col items-start justify-between gap-6 rounded-xl border border-slate-800/80 bg-slate-900/60 p-5 transition-colors hover:border-slate-700 md:flex-row md:p-6">
+    <article className="flex flex-col items-start justify-between gap-6 rounded-xl border border-neutral-800/80 bg-neutral-900/60 p-5 transition-colors hover:border-neutral-700 md:flex-row md:p-6">
       <div className="w-full flex-1 space-y-4">
         <div className="flex flex-wrap items-center gap-2">
           <PlatformBadge platform={item.platform} type={item.type} />
@@ -33,27 +33,27 @@ export function ContentCard({ item, onAction, onEdit }: ContentCardProps) {
             Confianza JEV: {item.confidence}%
           </span>
           {item.edited && (
-            <span className="rounded-md bg-indigo-500/10 px-2.5 py-1 text-xs font-medium text-indigo-300">
+            <span className="rounded-md bg-green-500/10 px-2.5 py-1 text-xs font-medium text-green-300">
               Editado
             </span>
           )}
-          <span className="ml-auto text-xs text-slate-500">
+          <span className="ml-auto text-xs text-neutral-500">
             <span className={cn('mr-2 font-medium', status.className)}>{status.label}</span>
             ID: #{item.id}
           </span>
         </div>
 
-        <blockquote className="rounded-lg border border-slate-800/50 bg-slate-950/60 p-4 font-mono text-sm leading-relaxed text-slate-200">
+        <blockquote className="rounded-lg border border-neutral-800/50 bg-neutral-950/60 p-4 font-mono text-sm leading-relaxed text-neutral-200">
           {`"${item.content}"`}
         </blockquote>
 
         <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Evaluación de Reglas JEV</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400">Evaluación de Reglas JEV</p>
           <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">
             {item.rules.map((rule) => (
               <li
                 key={rule.name}
-                className="flex items-start gap-2 rounded border border-slate-800/40 bg-slate-950/40 p-2 text-xs"
+                className="flex items-start gap-2 rounded border border-neutral-800/40 bg-neutral-950/40 p-2 text-xs"
               >
                 {rule.status === 'pass' ? (
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" aria-label="Cumple" />
@@ -61,10 +61,10 @@ export function ContentCard({ item, onAction, onEdit }: ContentCardProps) {
                   <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" aria-label="No cumple" />
                 )}
                 <div>
-                  <span className={rule.status === 'pass' ? 'text-slate-300' : 'font-medium text-amber-300'}>
+                  <span className={rule.status === 'pass' ? 'text-neutral-300' : 'font-medium text-amber-300'}>
                     {rule.name}
                   </span>
-                  {rule.note && <p className="mt-0.5 text-[11px] text-slate-500">{rule.note}</p>}
+                  {rule.note && <p className="mt-0.5 text-[11px] text-neutral-500">{rule.note}</p>}
                 </div>
               </li>
             ))}
@@ -85,7 +85,7 @@ export function ContentCard({ item, onAction, onEdit }: ContentCardProps) {
             <button
               type="button"
               onClick={() => onEdit(item)}
-              className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-4 py-2.5 text-xs font-semibold text-slate-200 transition-colors hover:bg-slate-700"
+              className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-2.5 text-xs font-semibold text-neutral-200 transition-colors hover:bg-neutral-700"
             >
               <Edit3 className="h-4 w-4" aria-hidden="true" /> Editar & Aprobar
             </button>
@@ -101,7 +101,7 @@ export function ContentCard({ item, onAction, onEdit }: ContentCardProps) {
           <button
             type="button"
             onClick={() => onAction(item.id, 'doubt')}
-            className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-4 py-2.5 text-xs font-semibold text-slate-200 transition-colors hover:bg-slate-700"
+            className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-2.5 text-xs font-semibold text-neutral-200 transition-colors hover:bg-neutral-700"
           >
             <RotateCcw className="h-4 w-4" aria-hidden="true" /> Devolver a revisión
           </button>

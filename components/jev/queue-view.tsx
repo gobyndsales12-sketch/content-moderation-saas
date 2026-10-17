@@ -12,7 +12,7 @@ const FILTERS: Array<{ id: Filter; label: string; dot?: string; active: string }
   { id: 'doubt', label: 'Casos Dudosos', dot: 'bg-amber-400', active: 'border-amber-500/30 bg-amber-500/20 text-amber-300' },
   { id: 'approved', label: 'Aprobados', dot: 'bg-emerald-400', active: 'border-emerald-500/20 bg-emerald-500/20 text-emerald-300' },
   { id: 'rejected', label: 'Descartados', dot: 'bg-rose-400', active: 'border-rose-500/20 bg-rose-500/20 text-rose-300' },
-  { id: 'all', label: 'Ver Todos', active: 'border-slate-700 bg-slate-800 text-white' },
+  { id: 'all', label: 'Ver Todos', active: 'border-neutral-700 bg-neutral-800 text-white' },
 ]
 
 type QueueViewProps = {
@@ -47,7 +47,7 @@ export function QueueView({ items, onAction, onEdit, onAnalyze }: QueueViewProps
             onClick={() => setFilter(f.id)}
             className={cn(
               'flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors',
-              filter === f.id ? f.active : 'border-slate-800 bg-slate-900 text-slate-400 hover:text-slate-200',
+              filter === f.id ? f.active : 'border-neutral-800 bg-neutral-900 text-neutral-400 hover:text-neutral-200',
             )}
           >
             {f.dot && <span className={cn('h-2 w-2 rounded-full', f.dot)} aria-hidden="true" />}
@@ -58,7 +58,7 @@ export function QueueView({ items, onAction, onEdit, onAnalyze }: QueueViewProps
 
       <div className="grid gap-4">
         {filtered.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-slate-800 py-16 text-center text-sm text-slate-500">
+          <div className="rounded-xl border border-dashed border-neutral-800 py-16 text-center text-sm text-neutral-500">
             No hay piezas de contenido en esta bandeja. ¡Excelente trabajo!
           </div>
         ) : (

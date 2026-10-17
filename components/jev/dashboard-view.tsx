@@ -15,7 +15,7 @@ export function DashboardView({ items }: { items: ContentItem[] }) {
     { label: 'Piezas Procesadas Hoy', value: processed, hint: '+18% vs ayer', valueClass: 'text-white', hintClass: 'text-emerald-400' },
     { label: 'Aprobación Autónoma JEV', value: `${autonomyRate}%`, hint: `${autoApproved} piezas sin intervención`, valueClass: 'text-emerald-400' },
     { label: 'Casos en Revisión', value: pending, hint: 'Pendientes / Dudosos', valueClass: 'text-amber-400' },
-    { label: 'Tiempo Ahorrado Estimado', value: `${hoursSaved} hrs`, hint: 'Equivalente a ~0.5 FTE', valueClass: 'text-indigo-400' },
+    { label: 'Tiempo Ahorrado Estimado', value: `${hoursSaved} hrs`, hint: 'Equivalente a ~0.5 FTE', valueClass: 'text-green-400' },
   ]
 
   const buckets = [
@@ -40,25 +40,25 @@ export function DashboardView({ items }: { items: ContentItem[] }) {
     <div className="flex-1 space-y-6 overflow-y-auto p-4 md:p-8">
       <section aria-label="Indicadores clave" className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {stats.map((s) => (
-          <div key={s.label} className="rounded-xl border border-slate-800 bg-slate-900/60 p-6">
-            <p className="text-xs font-medium uppercase text-slate-400">{s.label}</p>
+          <div key={s.label} className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-6">
+            <p className="text-xs font-medium uppercase text-neutral-400">{s.label}</p>
             <p className={`mt-2 text-3xl font-bold ${s.valueClass}`}>{s.value}</p>
-            <p className={`mt-1 text-xs ${s.hintClass ?? 'text-slate-500'}`}>{s.hint}</p>
+            <p className={`mt-1 text-xs ${s.hintClass ?? 'text-neutral-500'}`}>{s.hint}</p>
           </div>
         ))}
       </section>
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <section className="rounded-xl border border-slate-800 bg-slate-900/60 p-6">
+        <section className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-6">
           <h3 className="mb-4 text-sm font-semibold text-white">Distribución de confianza (sesión actual)</h3>
           <ul className="space-y-3">
             {buckets.map((b) => (
               <li key={b.label} className="space-y-1.5">
-                <div className="flex justify-between text-xs text-slate-400">
+                <div className="flex justify-between text-xs text-neutral-400">
                   <span>{b.label}</span>
-                  <span className="font-medium text-slate-200">{b.count}</span>
+                  <span className="font-medium text-neutral-200">{b.count}</span>
                 </div>
-                <div className="h-2 overflow-hidden rounded-full bg-slate-800">
+                <div className="h-2 overflow-hidden rounded-full bg-neutral-800">
                   <div className={`h-full rounded-full ${b.bar}`} style={{ width: `${(b.count / maxBucket) * 100}%` }} />
                 </div>
               </li>
@@ -66,19 +66,19 @@ export function DashboardView({ items }: { items: ContentItem[] }) {
           </ul>
         </section>
 
-        <section className="rounded-xl border border-slate-800 bg-slate-900/60 p-6">
+        <section className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-6">
           <h3 className="mb-4 text-sm font-semibold text-white">Reglas más infringidas</h3>
           {topFailures.length === 0 ? (
-            <p className="text-sm text-slate-500">Ninguna regla infringida en esta sesión.</p>
+            <p className="text-sm text-neutral-500">Ninguna regla infringida en esta sesión.</p>
           ) : (
             <ol className="space-y-2">
               {topFailures.map(([name, count], idx) => (
                 <li
                   key={name}
-                  className="flex items-center gap-3 rounded-lg border border-slate-800/60 bg-slate-950/40 px-3 py-2 text-sm"
+                  className="flex items-center gap-3 rounded-lg border border-neutral-800/60 bg-neutral-950/40 px-3 py-2 text-sm"
                 >
-                  <span className="text-xs font-bold text-slate-500">{idx + 1}</span>
-                  <span className="flex-1 text-slate-200">{name}</span>
+                  <span className="text-xs font-bold text-neutral-500">{idx + 1}</span>
+                  <span className="flex-1 text-neutral-200">{name}</span>
                   <span className="rounded bg-amber-500/10 px-2 py-0.5 text-xs font-semibold text-amber-400">{count}</span>
                 </li>
               ))}

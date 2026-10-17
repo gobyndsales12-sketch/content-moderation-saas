@@ -31,13 +31,13 @@ export function EditDialog({ item, onClose, onSave }: EditDialogProps) {
         aria-modal="true"
         aria-labelledby="edit-title"
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-lg space-y-4 rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-2xl"
+        className="w-full max-w-lg space-y-4 rounded-2xl border border-neutral-800 bg-neutral-900 p-6 shadow-2xl"
       >
         <div className="flex items-center justify-between">
           <h3 id="edit-title" className="text-base font-bold text-white">
             Edición Rápida de Contenido (#{item.id})
           </h3>
-          <button type="button" onClick={onClose} className="text-slate-400 hover:text-white" aria-label="Cerrar">
+          <button type="button" onClick={onClose} className="text-neutral-400 hover:text-white" aria-label="Cerrar">
             <X className="h-5 w-5" />
           </button>
         </div>
@@ -50,10 +50,10 @@ export function EditDialog({ item, onClose, onSave }: EditDialogProps) {
           ref={textareaRef}
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          className="h-32 w-full rounded-lg border border-slate-800 bg-slate-950 p-3 font-mono text-sm text-slate-200 focus:border-indigo-500 focus:outline-none"
+          className="h-32 w-full rounded-lg border border-neutral-800 bg-neutral-950 p-3 font-mono text-sm text-neutral-200 focus:border-green-500 focus:outline-none"
         />
 
-        <p className="text-xs text-slate-400">
+        <p className="text-xs text-neutral-400">
           Corrige el texto para cumplir con las políticas y aprueba directamente. JEV re-evaluará las reglas.
         </p>
 
@@ -61,7 +61,7 @@ export function EditDialog({ item, onClose, onSave }: EditDialogProps) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg bg-slate-800 px-4 py-2 text-xs font-semibold text-slate-300 hover:bg-slate-700"
+            className="rounded-lg bg-neutral-800 px-4 py-2 text-xs font-semibold text-neutral-300 hover:bg-neutral-700"
           >
             Cancelar
           </button>
